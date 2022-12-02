@@ -4,15 +4,16 @@ const rugDoctorImage = document.getElementById("rugDoctorImage")
 
 const carpet = document.getElementById("carpet")
 
-const smallCarpetBtn = document.getElementById("smallCarpetBtn")
-const mediumCarpetBtn = document.getElementById("mediumCarpetBtn")
-const largeCarpetBtn = document.getElementById("largeCarpetBtn")
+const smallMessBtn = document.getElementById("smallMessBtn")
+const mediumMessBtn = document.getElementById("mediumMessBtn")
+const largeMessBtn = document.getElementById("largeMessBtn")
 
-
-const makeDivs = (numDivs) => {
-    for (let i = 0; i < numDivs; i++){
-        let cells = document.createElement("div");
-        carpet.appendChild(cells)
+const makeSmallMess = () => {
+    let visibleSmallMess = document.getElementsByClassName('redMess');
+    if (visibleSmallMess.style.visibility === 'hidden') {
+        visibleSmallMess.style.visibility = 'visible';
+    } else {
+        visibleSmallMess.style.visibility = 'hidden'
     }
 }
 
@@ -30,6 +31,4 @@ bigGreenImage.addEventListener('click', changeCursorBigGreen)
 powerScrubDeluxeImage.addEventListener('click', changeCursorPowerScrubDeluxe)
 rugDoctorImage.addEventListener('click', changeCursorRugDoctor)
 
-smallCarpetBtn.addEventListener('click', () => makeDivs(9))
-mediumCarpetBtn.addEventListener('click', () => makeDivs(16))
-largeCarpetBtn.addEventListener('click', () => makeDivs(25))
+smallMessBtn.addEventListener('click', makeSmallMess)
