@@ -34,7 +34,6 @@ html, body {
 .carpet > div {
     width: 150px;
     height: 150px;
-    border: 1px solid black;
     background-color: tan;
 }
 
