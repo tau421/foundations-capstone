@@ -1,5 +1,7 @@
 var score = 0
 
+const getHighScoresBtn = document.getElementById('getHighScoresBtn')
+
 const bigGreenImage = document.getElementById("bigGreenImage")
 const powerScrubDeluxeImage = document.getElementById("powerScrubDeluxeImage")
 const rugDoctorImage = document.getElementById("rugDoctorImage")
@@ -17,6 +19,14 @@ const makeSmallMess = () => {
     } else {
         visibleSmallMess.style.visibility = 'hidden'
     }
+}
+
+const getHighScores = () => {
+    axios.get("http://localhost:5500/api/highscores/")
+    .then(res => {
+        const highScores = res.highScores;
+        alert(data);
+    })
 }
 
 const increaseScore = () => {
@@ -40,3 +50,5 @@ powerScrubDeluxeImage.addEventListener('click', changeCursorPowerScrubDeluxe)
 rugDoctorImage.addEventListener('click', changeCursorRugDoctor)
 
 smallMessBtn.addEventListener('click', makeSmallMess)
+getHighScoresBtn.addEventListener('click', getHighScores)
+
