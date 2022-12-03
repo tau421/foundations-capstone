@@ -9,7 +9,9 @@ app.use(cors());
 app.use(express.json());
 
 const { getHighScores } = require('./controller')
+const { addHighScore } = require('./controller')
 
 app.get("/api/highscores", getHighScores);
+app.post("/api/highscores", addHighScore);
 
 app.listen(5400, () => console.log('Server running on 5400'));

@@ -19,4 +19,12 @@ module.exports = {
         let sortHighScores = highScores.sort((a,b) => b.score - a.score)
         res.status(200).send(sortHighScores);
     }
+
+    ,
+
+    addHighScore: (req, res) => {
+        let {highScore} = req.body;
+        highScores.push(highScore)
+        res.status(200).send(highScores)
+    }
 }
