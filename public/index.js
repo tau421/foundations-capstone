@@ -45,6 +45,80 @@ const makeLargeMess = () => {
     }
 }
 
+const redSoap1 = () => {
+    document.getElementById("carpet1").innerHTML = '<img src="https://i.ibb.co/KbrKJTR/red-Soap-transparent.png" alt="red-Soap-transparent" id="redSoap1" onclick="cleanCarpet1()">'
+    increaseScore()
+}
+const redSoap4 = () => {
+    document.getElementById("carpet4").innerHTML = '<img src="https://i.ibb.co/KbrKJTR/red-Soap-transparent.png" alt="red-Soap-transparent" id="redSoap4" onclick="cleanCarpet4()">'
+    increaseScore()
+}
+const redSoap7 = () => {
+    document.getElementById("carpet7").innerHTML = '<img src="https://i.ibb.co/KbrKJTR/red-Soap-transparent.png" alt="red-Soap-transparent" id="redSoap7" onclick="cleanCarpet7()">'
+    increaseScore()
+}
+const redSoap10 = () => {
+    document.getElementById("carpet10").innerHTML = '<img src="https://i.ibb.co/KbrKJTR/red-Soap-transparent.png" alt="red-Soap-transparent" id="redSoap10" onclick="cleanCarpet10()">'
+    increaseScore()
+}
+const redSoap13 = () => {
+    document.getElementById("carpet13").innerHTML = '<img src="https://i.ibb.co/KbrKJTR/red-Soap-transparent.png" alt="red-Soap-transparent" id="redSoap13" onclick="cleanCarpet13()">'
+    increaseScore()
+}
+const redSoap16 = () => {
+    document.getElementById("carpet16").innerHTML = '<img src="https://i.ibb.co/KbrKJTR/red-Soap-transparent.png" alt="red-Soap-transparent" id="redSoap16" onclick="cleanCarpet16()">'
+    increaseScore()
+}
+const redSoap19 = () => {
+    document.getElementById("carpet19").innerHTML = '<img src="https://i.ibb.co/KbrKJTR/red-Soap-transparent.png" alt="red-Soap-transparent" id="redSoap19" onclick="cleanCarpet19()">'
+    increaseScore()
+}
+const redSoap22 = () => {
+    document.getElementById("carpet22").innerHTML = '<img src="https://i.ibb.co/KbrKJTR/red-Soap-transparent.png" alt="red-Soap-transparent" id="redSoap22" onclick="cleanCarpet22()">'
+    increaseScore()
+}
+const redSoap25 = () => {
+    document.getElementById("carpet25").innerHTML = '<img src="https://i.ibb.co/KbrKJTR/red-Soap-transparent.png" alt="red-Soap-transparent" id="redSoap25" onclick="cleanCarpet25()">'
+    increaseScore()
+}
+
+const cleanCarpet1 = () => {
+    document.getElementById("redSoap1").style.visibility = 'hidden'
+    increaseScore()
+}
+const cleanCarpet4 = () => {
+    document.getElementById("redSoap4").style.visibility = 'hidden'
+    increaseScore()
+}
+const cleanCarpet7 = () => {
+    document.getElementById("redSoap7").style.visibility = 'hidden'
+    increaseScore()
+}
+const cleanCarpet10 = () => {
+    document.getElementById("redSoap10").style.visibility = 'hidden'
+    increaseScore()
+}
+const cleanCarpet13 = () => {
+    document.getElementById("redSoap13").style.visibility = 'hidden'
+    increaseScore()
+}
+const cleanCarpet16 = () => {
+    document.getElementById("redSoap16").style.visibility = 'hidden'
+    increaseScore()
+}
+const cleanCarpet19 = () => {
+    document.getElementById("redSoap19").style.visibility = 'hidden'
+    increaseScore()
+}
+const cleanCarpet22 = () => {
+    document.getElementById("redSoap22").style.visibility = 'hidden'
+    increaseScore()
+}
+const cleanCarpet25 = () => {
+    document.getElementById("redSoap25").style.visibility = 'hidden'
+    increaseScore()
+}
+
 const getHighScores = () => {
     axios.get("http://localhost:5400/api/highscores/")
     .then(res => {
