@@ -12,4 +12,4 @@ const { getHighScores } = require('./controller')
 
 app.get("/api/highscores", getHighScores);
 
-app.listen(5500, () => console.log('Server running on 5500'));
+app.listen(5400, () => console.log('Server running on 5400'));

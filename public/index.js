@@ -14,18 +14,41 @@ const largeMessBtn = document.getElementById("largeMessBtn")
 
 const makeSmallMess = () => {
     let visibleSmallMess = document.getElementsByClassName("redMess");
-    if (visibleSmallMess.style.visibility === 'hidden') {
-        visibleSmallMess.style.visibility = 'visible';
-    } else {
-        visibleSmallMess.style.visibility = 'hidden'
+    for (i = 0; i < visibleSmallMess.length; i++) {
+        if (visibleSmallMess[i].style.visibility != 'visible') {
+            visibleSmallMess[i].style.visibility = 'visible';
+        } else {
+            visibleSmallMess[i].style.visibility = 'hidden'
+        }
+    }  
+}
+
+const makeMediumMess = () => {
+    let visibleMediumMess = document.querySelectorAll(".redMess , .yellowMess");
+    for (i = 0; i < visibleMediumMess.length; i++) {
+        if (visibleMediumMess[i].style.visibility != 'visible') {
+            visibleMediumMess[i].style.visibility = 'visible';
+        } else {
+            visibleMediumMess[i].style.visibility = 'hidden'
+        }
+    }
+}
+
+const makeLargeMess = () => {
+    let visibleLargeMess = document.querySelectorAll(".redMess , .yellowMess , .brownMess");
+    for (i = 0; i < visibleLargeMess.length; i++) {
+        if (visibleLargeMess[i].style.visibility != 'visible') {
+            visibleLargeMess[i].style.visibility = 'visible';
+        } else {
+            visibleLargeMess[i].style.visibility = 'hidden'
+        }
     }
 }
 
 const getHighScores = () => {
-    axios.get("http://localhost:5500/api/highscores/")
+    axios.get("http://localhost:5400/api/highscores/")
     .then(res => {
-        const highScores = res.highScores;
-        alert(data);
+        let highScores = res.data
     })
 }
 
@@ -50,5 +73,8 @@ powerScrubDeluxeImage.addEventListener('click', changeCursorPowerScrubDeluxe)
 rugDoctorImage.addEventListener('click', changeCursorRugDoctor)
 
 smallMessBtn.addEventListener('click', makeSmallMess)
+mediumMessBtn.addEventListener('click', makeMediumMess)
+largeMessBtn.addEventListener('click', makeLargeMess)
+
 getHighScoresBtn.addEventListener('click', getHighScores)
 
