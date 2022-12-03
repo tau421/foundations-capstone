@@ -49,28 +49,53 @@ html, body {
     visibility: hidden;
 }
 
+/* CSS for Soapy to Clean */
 #redSoap1 {
+    visibility: visible;
+}
+#yellowSoap2 {
     visibility: visible;
 }
 #redSoap4 {
     visibility: visible;
 }
+#yellowSoap5 {
+    visibility: visible;
+}
 #redSoap7 {
+    visibility: visible;
+}
+#yellowSoap8 {
     visibility: visible;
 }
 #redSoap10 {
     visibility: visible;
 }
+#yellowSoap11 {
+    visibility: visible;
+}
 #redSoap13 {
+    visibility: visible;
+}
+#yellowSoap14 {
     visibility: visible;
 }
 #redSoap16 {
     visibility: visible;
 }
+#yellowSoap17 {
+    visibility: visible;
+}
 #redSoap19 {
     visibility: visible;
 }
+#yellowSoap20 {
+    visibility: visible;
+}
 #redSoap22 {
+    visibility: visible;
+}
+#yellowSoap23 {
     visibility: visible;
 }
 #redSoap25 {
