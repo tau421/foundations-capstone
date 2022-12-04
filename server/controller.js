@@ -23,8 +23,7 @@ module.exports = {
     ,
 
     addHighScore: (req, res) => {
-        let {highScore} = req.body;
-        highScores.push(highScore)
+        highScores.push(req.body)
         res.status(200).send(highScores)
     }
 }

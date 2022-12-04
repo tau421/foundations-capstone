@@ -276,7 +276,6 @@ const highScoreSubmission = () => {
         name: highScoreSubmission.value,
         score: currentScore.innerHTML
     }
-    console.log(bodyObj)
     addHighScore(bodyObj)
 }
 
