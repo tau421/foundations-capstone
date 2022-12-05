@@ -10,15 +10,15 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", function(req,res) {
-    res.sendFile(path.join(__dirname, "public/index.html"));
+    res.sendFile(path.join(__dirname, "/public/index.html"));
 })
 
 app.get("styles.css", function(req,res) {
-    res.sendFile(path.join(__dirname, "public/styles.css"));
+    res.sendFile(path.join(__dirname, "/public/styles.css"));
 })
 
 app.get("index.js", function(req,res) {
-    res.sendFile(path.join(__dirname, "public/index.js"));
+    res.sendFile(path.join(__dirname, "/public/index.js"));
 })
 
 const { getHighScores } = require('./controller')
