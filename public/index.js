@@ -249,7 +249,7 @@ const cleanCarpet25 = () => {
 }
 
 const getHighScores = () => {
-    axios.get("http://localhost:5400/api/highscores/")
+    axios.get("https://pt6-capstone.herokuapp.com/api/highscores/")
     .then(res => {
         let highScores = res.data
         alert(JSON.stringify(highScores))
@@ -263,7 +263,7 @@ const increaseScore = () => {
 }
 
 const addHighScore = (body) => {
-    axios.post("http://localhost:5400/api/highscores/", body)
+    axios.post("https://pt6-capstone.herokuapp.com/api/highscores/", body)
     .then(res => {
         alert("You added your score!")
     })
