@@ -8,6 +8,10 @@ app.use(cors());
 
 app.use(express.json());
 
+app.get("/js", function(req,res) {
+    res.sendFile(path.join(__dirname, "public/index.html"));
+})
+
 const { getHighScores } = require('./controller')
 const { addHighScore } = require('./controller')
 
