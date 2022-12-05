@@ -14,4 +14,6 @@ const { addHighScore } = require('./controller')
 app.get("/api/highscores", getHighScores);
 app.post("/api/highscores", addHighScore);
 
-app.listen(5400, () => console.log('Server running on 5400'));
+const port = process.envPORT || 3000
+
+app.listen(port, () => console.log(`Listening on port ${port}`));
