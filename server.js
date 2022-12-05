@@ -14,11 +14,11 @@ app.get("/", function(req,res) {
 })
 
 app.get("/styles", function(req,res) {
-    res.sendFile(path.join(__dirname, "public/index.html"));
+    res.sendFile(path.join(__dirname, "public/styles.css"));
 })
 
 app.get("/js", function(req,res) {
-    res.sendFile(path.join(__dirname, "public/index.html"));
+    res.sendFile(path.join(__dirname, "public/index.js"));
 })
 
 const { getHighScores } = require('./controller')
